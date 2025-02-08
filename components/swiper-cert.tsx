@@ -92,6 +92,7 @@ export default function CertificationsSection() {
                                     width={100}
                                     height={200}
                                     src={cert.websiteIcon}
+                                    priority
                                 />
                                 {cert.websiteIcon2 && (
                                     <Image
@@ -99,6 +100,7 @@ export default function CertificationsSection() {
                                         width={100}
                                         height={200}
                                         src={cert.websiteIcon2}
+                                        priority
                                     />
                                 )}
                                 {cert.websiteIcon3 && (
@@ -107,6 +109,7 @@ export default function CertificationsSection() {
                                         width={100}
                                         height={200}
                                         src={cert.websiteIcon3}
+                                        priority
                                     />
                                 )}
                             </div>
