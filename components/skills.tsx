@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import Image from "next/image";
 
 const skillsData = [
     {
@@ -91,11 +92,15 @@ export default function SkillsSection() {
                                             <div
                                                 key={skillIndex}
                                                 className='flex flex-col items-center'>
-                                                <img
-                                                    src={skill.icon}
-                                                    alt={skill.name}
-                                                    className='h-16 w-16'
-                                                />
+                                                <div className='icon-wrapper'>
+                                                    <Image
+                                                        alt={skill.name}
+                                                        width={50}
+                                                        height={50}
+                                                        src={skill.icon}
+                                                        className='icon'
+                                                    />
+                                                </div>
                                             </div>
                                         )
                                     )}

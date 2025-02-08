@@ -203,3 +203,19 @@ footer {
 .light .my-contacttext {
     color: #000;
 }
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.icon {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

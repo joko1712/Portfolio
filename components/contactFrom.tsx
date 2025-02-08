@@ -15,6 +15,7 @@ export default function ContactForm() {
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         const { name, value } = e.target;
+
         setFormData({ ...formData, [name]: value });
     };
 
@@ -42,74 +43,85 @@ export default function ContactForm() {
 
     return (
         <form
-            onSubmit={handleSubmit}
-            className='.my-contact flex flex-col w-full p-6 rounded-xl space-y-4'>
+            className='my-contact flex flex-col w-full p-6 rounded-xl space-y-4'
+            onSubmit={handleSubmit}>
             <input
-                type='hidden'
                 name='_subject'
+                type='hidden'
                 value='New Message from Portfolio'
             />
-            <input type='hidden' name='_replyto' value={formData.email} />
+            <input name='_replyto' type='hidden' value={formData.email} />
             <input
-                type='text'
+                aria-hidden='true'
+                className='hidden' // Hides the honeypot field
                 name='_gotcha'
-                style={{ display: "none" }}
                 tabIndex={-1}
-            />{" "}
-            {/* Honeypot Field */}
+                type='text'
+            />
+
             <div>
-                <label htmlFor='name' className='.my-contacttext block mb-1'>
+                <label className='my-contacttext block mb-1' htmlFor='name'>
                     Name
                 </label>
                 <input
-                    type='text'
+                    required
+                    className=' w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
                     id='name'
                     name='name'
+                    type='text'
                     value={formData.name}
                     onChange={handleChange}
-                    required
-                    className='.my-footer w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
                 />
             </div>
+
             <div>
-                <label htmlFor='email' className='.my-contacttext block mb-1'>
+                <label className='my-contacttext block mb-1' htmlFor='email'>
                     Email
                 </label>
                 <input
-                    type='email'
-                    id='email'
-                    name='email'
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className='w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                    id='email'
+                    name='email'
+                    type='email'
+                    value={formData.email}
+                    onChange={handleChange}
                 />
             </div>
+
             <div>
-                <label htmlFor='message' className='.my-contacttext block mb-1'>
+                <label className='my-contacttext block mb-1' htmlFor='message'>
                     Message
                 </label>
                 <textarea
-                    id='message'
-                    name='message'
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     className='w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
-                    rows={5}></textarea>
+                    id='message'
+                    name='message'
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                />
             </div>
+
             <button
-                type='submit'
-                className='skills-Button w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-purple-500 transition-colors'>
+                className='skills-Button w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-purple-500 transition-colors'
+                type='submit'>
                 Send Message
             </button>
+
             {status === "SUCCESS" && (
-                <div className='mt-4 p-3 bg-green-500 text-white text-center rounded'>
-                    Thank you for reaching out! I'll get back to you soon.
+                <div
+                    aria-live='polite'
+                    className='mt-4 p-3 bg-green-500 text-white text-center rounded'>
+                    Thank you for reaching out! I&apos;ll get back to you soon.
                 </div>
             )}
+
             {status === "ERROR" && (
-                <div className='mt-4 p-3 bg-red-500 text-white text-center rounded'>
+                <div
+                    aria-live='polite'
+                    className='mt-4 p-3 bg-red-500 text-white text-center rounded'>
                     Oops! Something went wrong. Please try again.
                 </div>
             )}

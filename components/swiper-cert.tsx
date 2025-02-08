@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Navigation } from "swiper/modules";
+import Image from "next/image";
 
 const certificationsData = [
     {
@@ -46,6 +47,14 @@ const certificationsData = [
             "https://www.coursera.org/account/accomplishments/specialization/certificate/PUG365WJU8PF",
     },
     {
+        websiteIcon: "/Icons/udemy-seeklogo.svg",
+        title: "The Complete React Native + Hooks Course",
+        description:
+            "If you're tired of spinning your wheels learning Swift or Android, this is the course for you. Authentication? You will learn it.  Hooks? Included.  Navigation? Of course! This course will get you up and running with React Native quickly, and teach you the core knowledge you need to deeply understand and build React components for mobile devices.",
+        certLink:
+            "https://www.udemy.com/certificate/UC-aa8f1fb2-4654-4d5c-91f7-5afb439a9c38/",
+    },
+    {
         websiteIcon: "/Icons/idONf4qM5N_1738943506422.svg",
         title: "Become a Python Master",
         description:
@@ -53,24 +62,13 @@ const certificationsData = [
         certLink:
             "https://programiz.pro/certificates/08da9fe7-62fc-4a12-8347-35fb8c0371fd",
     },
-    {
-        websiteIcon: "/Icons/udemy-2.svg",
-        title: "The Complete React Native + Hooks Course",
-        description:
-            "If you're tired of spinning your wheels learning Swift or Android, this is the course for you. Authentication? You will learn it.  Hooks? Included.  Navigation? Of course! This course will get you up and running with React Native quickly, and teach you the core knowledge you need to deeply understand and build React components for mobile devices.",
-        certLink:
-            "https://www.udemy.com/certificate/UC-aa8f1fb2-4654-4d5c-91f7-5afb439a9c38/",
-    },
 ];
 
 export default function CertificationsSection() {
     return (
         <div className='flex items-center justify-center'>
             <Swiper
-                effect={"coverflow"}
-                grabCursor={true}
                 centeredSlides={true}
-                slidesPerView={"auto"}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
@@ -78,28 +76,37 @@ export default function CertificationsSection() {
                     modifier: 1,
                     slideShadows: true,
                 }}
+                effect={"coverflow"}
+                grabCursor={true}
+                modules={[EffectCoverflow, Navigation]}
                 navigation={true}
-                modules={[EffectCoverflow, Navigation]}>
+                slidesPerView={"auto"}>
                 {certificationsData.map((cert, index) => (
                     <SwiperSlide
                         key={index}
-                        className='my-swiper flex items-center justify-center bg-gray-800 rounded-xl p-6 text-center max-w-xl h-[500px] relative'>
+                        className='my-swiper flex items-center justify-center bg-gray-800 rounded-xl p-6 text-center max-w-xl h-[400px] relative'>
                         <div className='flex flex-col items-center w-full'>
                             <div className='flex space-x-4 mb-4'>
-                                <img
+                                <Image
+                                    alt='Certificate Icon'
+                                    width={100}
+                                    height={200}
                                     src={cert.websiteIcon}
-                                    className='h-24 w-24'
                                 />
                                 {cert.websiteIcon2 && (
-                                    <img
+                                    <Image
+                                        alt='Certificate Icon'
+                                        width={100}
+                                        height={200}
                                         src={cert.websiteIcon2}
-                                        className='h-24 w-24'
                                     />
                                 )}
                                 {cert.websiteIcon3 && (
-                                    <img
+                                    <Image
+                                        alt='Certificate Icon'
+                                        width={100}
+                                        height={200}
                                         src={cert.websiteIcon3}
-                                        className='h-24 w-24'
                                     />
                                 )}
                             </div>
@@ -110,10 +117,10 @@ export default function CertificationsSection() {
                                 {cert.description}
                             </p>
                             <a
+                                className='skills-Button px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-purple-500 transition-colors'
                                 href={cert.certLink}
-                                target='_blank'
                                 rel='noopener noreferrer'
-                                className='skills-Button px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-purple-500 transition-colors'>
+                                target='_blank'>
                                 View Certification
                             </a>
                         </div>
