@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark .my-navbar {
+    background-color: rgb(9, 9, 11);
+}
+
+.light .my-navbar {
+    background-color: rgb(235, 235, 237);
+}
+
+.dark .my-footer {
+    background-color: rgb(9, 9, 11);
+}
+
+.light .my-footer {
+    background-color: rgb(235, 235, 237);
+}
+
+.text-Uni {
+    font-size: 2rem;
+}
+
+.text-About {
+    font-size: 3.5rem;
+}
+
+.text-description {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1920px) {
+    .text-Uni {
+        font-size: 1.35rem;
+    }
+    .text-About {
+        font-size: 3.5rem;
+    }
+    .text-description {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .text-Uni {
+        font-size: 0.9rem;
+    }
+    .text-About {
+        font-size: 2rem;
+    }
+    .text-description {
+        font-size: 1rem;
+    }
+}
+
+@keyframes arrowBounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.arrow-bounce {
+    animation: arrowBounce 2s infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    20% {
+        transform: rotate(10deg) translateY(-50px);
+    }
+    40% {
+        transform: rotate(-15deg) translateY(-60px);
+    }
+    60% {
+        transform: rotate(6deg) translateY(-50px);
+    }
+    80% {
+        transform: rotate(-6deg) translateY(-55px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+.arrow-wave {
+    display: inline-block;
+    animation: wave 2.5s infinite ease-in-out;
+    transform-origin: center;
+    font-size: 7rem;
+}
+
+.dark .resume-Button {
+    background-color: #9333ea;
+
+    box-shadow:
+        0 10px 15px -3px rgba(99, 102, 241, 0.5),
+        0 4px 6px -4px rgba(99, 102, 241, 0.5);
+
+    border-radius: 0.75rem;
+
+    padding: 0.5rem 1rem;
+
+    font-size: 1.125rem;
+
+    color: #fff;
+
+    border: none;
+}
+
+.light .resume-Button {
+    background-color: #ae85d5;
+
+    box-shadow:
+        0 10px 15px -3px rgba(99, 102, 241, 0.5),
+        0 4px 6px -4px rgba(99, 102, 241, 0.5);
+
+    border-radius: 0.75rem;
+
+    padding: 0.5rem 1rem;
+
+    font-size: 1.125rem;
+
+    color: #fff;
+
+    border: none;
+}
+
+.dark .skills-Button {
+    background-color: #9333ea;
+
+    box-shadow:
+        0 10px 15px -3px rgba(99, 102, 241, 0.5),
+        0 4px 6px -4px rgba(99, 102, 241, 0.5);
+
+    border-radius: 0.75rem;
+
+    color: #fff;
+
+    border: none;
+}
+
+.light .skills-Button {
+    background-color: #ae85d5;
+
+    box-shadow:
+        0 10px 15px -3px rgba(99, 102, 241, 0.5),
+        0 4px 6px -4px rgba(99, 102, 241, 0.5);
+
+    border-radius: 0.75rem;
+
+    color: #fff;
+
+    border: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.dark .my-swiper {
+    background-color: #424242;
+}
+
+.light .my-swiper {
+    background-color: #757575;
+}
+
+.dark .my-contact {
+    background-color: rgb(9 9 11);
+}
+
+.light .my-contact {
+    background-color: rgb(244 244 245);
+}
+
+.dark .my-contacttext {
+    color: #fff;
+}
+
+.light .my-contacttext {
+    color: #000;
+}
