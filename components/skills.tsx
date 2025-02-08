@@ -63,17 +63,20 @@ export default function SkillsSection() {
 
     return (
         <div className='p-4 flex flex-row gap-4 justify-center'>
-            <div className='w-1/4'>
+            <div className='w-1/4 min-w-32'>
                 <ul className='list-none'>
                     {skillsData.map((category, index) => (
                         <li key={index} className='mb-2'>
                             <button
-                                className={`w-full text-left p-2 rounded ${
+                                className={`w-full text-left p-2 rounded overflow-hidden text-ellipsis break-words line-clamp-2 flex-shrink-0 ${
                                     activeTab === category.category
                                         ? "skills-Button text-white"
                                         : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                                 }`}
-                                onClick={() => setActiveTab(category.category)}>
+                                onClick={() => setActiveTab(category.category)}
+                                style={{
+                                    minHeight: "48px",
+                                }}>
                                 {category.category}
                             </button>
                         </li>
@@ -81,7 +84,9 @@ export default function SkillsSection() {
                 </ul>
             </div>
 
-            <div>
+            <div className='flex-1'>
+                {" "}
+                {/* Allows content to take remaining space */}
                 {skillsData.map(
                     (category, index) =>
                         activeTab === category.category && (
