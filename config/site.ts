@@ -10,6 +10,6 @@ export const siteConfig = {
   links: {
     github: "https://github.com/joko1712",
     linkedin: "https://www.linkedin.com/in/pedreira-jose/",
-    resume: "/Pedreria_Jose_CV_.pdf",
+    resume: "/Pedreria_CV.pdf",
   },
 };
