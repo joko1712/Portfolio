@@ -68,10 +68,11 @@ export default function SkillsSection() {
                     {skillsData.map((category, index) => (
                         <li key={index} className='mb-2'>
                             <button
-                                className={`w-full text-left p-2 rounded overflow-hidden text-ellipsis break-words line-clamp-2 flex-shrink-0 ${
-                                    activeTab === category.category
-                                        ? "skills-Button text-white"
-                                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                                className={`w-full text-left p-2 rounded flex-shrink-0 whitespace-normal break-words
+                                ${
+                                activeTab === category.category
+                                    ? "skills-Button text-white"
+                                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                                 }`}
                                 onClick={() => setActiveTab(category.category)}
                                 style={{

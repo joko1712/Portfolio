@@ -26,7 +26,7 @@ export default function SpotifyEmbed() {
         onKeyDown={(e) => e.key === "Enter" && setIsOpen(!isOpen)}
       >
         <span className="font-semibold text-sm">My Spotify Playlist</span>
-        <button className="text-ld font-bold hover:opacity-100">
+        <button className="text-ld font-bold hover:opacity-300">
           {isOpen ? "▼" : "▲"}
         </button>
       </div>
