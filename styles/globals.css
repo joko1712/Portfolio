@@ -111,13 +111,17 @@
 
     border-radius: 0.75rem;
 
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
 
     font-size: 1.125rem;
 
     color: #fff;
 
     border: none;
+
+    margin-inline: 10px;
+
+    font-size: larger;
 }
 
 .light .resume-Button {
@@ -129,13 +133,17 @@
 
     border-radius: 0.75rem;
 
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
 
     font-size: 1.125rem;
 
     color: #fff;
 
     border: none;
+
+    margin-inline: 10px;
+
+    font-size: larger;
 }
 
 .dark .skills-Button {
