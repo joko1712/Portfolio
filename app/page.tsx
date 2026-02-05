@@ -22,7 +22,7 @@ export default function Home() {
 
                 <h3 className='text-Uni mt-6'>
                     Researcher @ NOVA.id.FCT — Building clinical
-                    decision-support tools (FRAIL AI)
+                    decision-support tools
                 </h3>
                 <h3 className='text-Uni mt-2'>
                     Co-creator of HYBpy — published + presented internationally
