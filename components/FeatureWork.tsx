@@ -59,8 +59,36 @@ const featuredWork: FeaturedWorkItem[] = [
         ],
     },
     {
+        title: "FRAIL NOVA ID",
+        subtitle: "Clinical Decision Support System",
+        badge: "Research",
+        role: "Co-Developer / ML Integration",
+        org: "NOVA School of Science and Technology",
+        description:
+            "Web-based clinical decision support system for frailty and fall risk prediction in elderly populations, integrating machine learning models with an interactive dashboard for real-time patient assessment.",
+        bullets: [
+            "Developed a full-stack application combining a Dash/Flask frontend with a FastAPI backend for serving ML predictions",
+            "Built interactive risk visualizations including gauge charts and violin plots comparing patient data against population distributions",
+            "Implemented secure authentication and sarcopenia assessment following EWGSOP2 guidelines",
+        ],
+        tech: [
+            "Python",
+            "Dash",
+            "Flask",
+            "FastAPI",
+            "scikit-learn",
+            "MLflow",
+            "Plotly",
+            "Docker",
+            "Pandas",
+            "XGBoost",
+            "LightGBM",
+        ],
+    },
+    {
         title: "Linde (AI Department)",
         subtitle: "Full-stack Internship",
+        badge: "Internship",
         role: "Full-stack Developer Intern",
         period: "Dec 2022 – Dec 2023",
         description:
