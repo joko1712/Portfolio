@@ -53,7 +53,7 @@ export default function ContactForm() {
             <input name='_replyto' type='hidden' value={formData.email} />
             <input
                 aria-hidden='true'
-                className='hidden' // Hides the honeypot field
+                className='hidden'
                 name='_gotcha'
                 tabIndex={-1}
                 type='text'

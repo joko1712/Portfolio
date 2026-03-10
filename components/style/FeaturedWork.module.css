@@ -1,0 +1,83 @@
+/* FeaturedWork.module.css */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.rainbowBtn{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13px;
+  color: inherit;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.rainbowBtn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+
+  background: conic-gradient(
+    from var(--a),
+    #ff004c,
+    #ff8a00,
+    #ffe600,
+    #27ff6a,
+    #00c2ff,
+    #7a5cff,
+    #ff00c8,
+    #ff004c
+  );
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  padding: 2px;
+  animation: hueSpin 2.2s linear infinite;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rainbowBtn > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes hueSpin {
+  to {
+    --a: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rainbowBtn::before {
+    animation: none;
+  }
+}
+
+
