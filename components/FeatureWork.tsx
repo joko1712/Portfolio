@@ -29,10 +29,10 @@ const featuredWork: FeaturedWorkItem[] = [
         description:
             "Open-source, web-based framework for hybrid modeling of biological systems, enabling the integration of mechanistic (first-principles) models with data-driven machine learning components through a guided and reproducible workflow.",
         bullets: [
-            "Implements a structured pipeline for building, training, and evaluating hybrid models",
-            "Supports integration of mechanistic models with ML components for biological and bioprocess systems",
-            "Validated through literature-based case studies and published as a peer-reviewed journal article",
-            "Developed as part of MSc thesis (final grade: 17/20); presented internationally, including conferences in Copenhagen and Lisbon",
+            "Implements a structured pipeline for building, training, and evaluating hybrid models.",
+            "Supports integration of mechanistic models with ML components for biological and bioprocess systems.",
+            "Validated through literature-based case studies and published as a peer-reviewed journal article.",
+            "Developed as part of MSc thesis (final grade: 17/20); presented internationally, including conferences in Copenhagen and Lisbon.",
         ],
         tech: [
             "Python",
@@ -67,9 +67,9 @@ const featuredWork: FeaturedWorkItem[] = [
         description:
             "Web-based clinical decision support system for frailty and fall risk prediction in elderly populations, integrating machine learning models with an interactive dashboard for real-time patient assessment.",
         bullets: [
-            "Developed a full-stack application combining a Dash/Flask frontend with a FastAPI backend for serving ML predictions",
-            "Built interactive risk visualizations including gauge charts and violin plots comparing patient data against population distributions",
-            "Implemented secure authentication and sarcopenia assessment following EWGSOP2 guidelines",
+            "Developed a full-stack application combining a Dash/Flask frontend with a FastAPI backend for serving ML predictions.",
+            "Built interactive risk visualizations including gauge charts and violin plots comparing patient data against population distributions.",
+            "Implemented secure authentication and sarcopenia assessment following EWGSOP2 guidelines.",
         ],
         tech: [
             "Python",
@@ -86,6 +86,63 @@ const featuredWork: FeaturedWorkItem[] = [
         ],
     },
     {
+        title: "NutriBase",
+        subtitle: "Nutritionist Management Platform",
+        badge: "Freelance",
+        role: "Full-stack Developer",
+        description:
+            "Production web application built for a nutritionist to manage clients, appointments, and health tracking. Features online booking with Google Calendar/Meet integration, anthropometric data visualization, and AES-256 encrypted patient data storage.",
+        bullets: [
+            "Built a complete client management system with appointment scheduling and Google Calendar/Meet integration via OAuth2.",
+            "Implemented AES-256 encryption for sensitive patient health data with secure Firebase backend.",
+            "Developed interactive anthropometric tracking dashboards with Recharts for monitoring patient progress over time.",
+            "Integrated automated email notifications for appointment confirmations and reminders using EmailJS.",
+        ],
+        tech: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Firebase",
+            "Material UI",
+            "Google Calendar API",
+            "AES-256 Encryption",
+            "Recharts",
+            "EmailJS",
+        ],
+        links: [
+            { label: "GitHub", href: "https://github.com/joko1712/NutriBase" },
+        ],
+    },
+    {
+        title: "VinylRecognition",
+        subtitle: "AI-Powered Vinyl Record Identifier",
+        badge: "Personal Project",
+        role: "Creator / Developer",
+        description:
+            "Machine learning system that identifies vinyl records from images using CLIP embeddings and vector similarity search, served through a FastAPI backend for real-time predictions.",
+        bullets: [
+            "Engineered an image recognition pipeline using OpenAI CLIP embeddings and FAISS vector search for instant vinyl identification.",
+            "Built a Discogs data scraper and image downloader to create a comprehensive vinyl cover database.",
+            "Implemented OCR-based catalog number extraction as a fallback identification method.",
+        ],
+        tech: [
+            "Python",
+            "FastAPI",
+            "CLIP",
+            "PyTorch",
+            "FAISS",
+            "OpenAI",
+            "Pillow",
+            "PaddleOCR",
+        ],
+        links: [
+            {
+                label: "GitHub",
+                href: "https://github.com/joko1712/VinylRecognition",
+            },
+        ],
+    },
+    {
         title: "Linde (AI Department)",
         subtitle: "Full-stack Internship",
         badge: "Internship",
@@ -94,8 +151,8 @@ const featuredWork: FeaturedWorkItem[] = [
         description:
             "Contributed to production-grade web applications and backend systems in an AI-focused environment, including components for conversational agents.",
         bullets: [
-            "Implemented and maintained frontend features across internal/client-facing apps",
-            "Developed backend components for a conversational agent (API integration + persistence)",
+            "Implemented and maintained frontend features across internal/client-facing apps.",
+            "Developed backend components for a conversational agent (API integration + persistence).",
         ],
         tech: [
             "React",
