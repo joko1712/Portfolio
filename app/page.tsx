@@ -118,6 +118,15 @@ export default function Home() {
             <div
                 className='mt-[10%] inline-block max-w-[95%] text-center justify-center'
                 style={{ minBlockSize: "500px" }}>
+                <h1 className='text-About font-bold mt-8'>
+                    Publications & Talks
+                </h1>
+                <PublicationsTalks />
+            </div>
+
+            <div
+                className='mt-[10%] inline-block max-w-[95%] text-center justify-center'
+                style={{ minBlockSize: "500px" }}>
                 <h1 className='text-About font-bold mt-8 mb-8'>Skills</h1>
                 <SkillsSection />
             </div>
@@ -129,15 +138,6 @@ export default function Home() {
                     Certifications
                 </h1>
                 <SwiperCertifications />
-            </div>
-
-            <div
-                className='mt-[10%] inline-block max-w-[95%] text-center justify-center'
-                style={{ minBlockSize: "500px" }}>
-                <h1 className='text-About font-bold mt-8'>
-                    Publications & Talks
-                </h1>
-                <PublicationsTalks />
             </div>
 
             <div
